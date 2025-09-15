@@ -46,16 +46,17 @@ function crearCard() {
 
       //boton
       const btn = document.createElement('a');
-      btn.className = 'btn btn-primary';
-      btn.textContent = 'borrar';
+      btn.className = 'btn btn-danger';
         btn.addEventListener("click", function(){
             borrar(x)
         } )
-      
+      const icono = document.createElement("i")
+      icono.className ="bi bi-trash-fill"
+
       cardBody.appendChild(title);
       cardBody.appendChild(text);
+      btn.appendChild(icono)
       cardBody.appendChild(btn);
-
       card.appendChild(img);
       card.appendChild(cardBody);
       col.appendChild(card);
